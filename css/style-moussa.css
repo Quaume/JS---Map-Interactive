@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+* {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+*:focus {
+  outline: none;
+}
+
+html,
+body{
+  height: 100%;
+}
+
+svg {
+    pointer-events: all;
+    width: 100%;
+  }
+
+path:hover{
+    fill : grey;
+}
+
+body{
+  font-family: "Nunito", sans-serif;
+  font-size: calc(.4em + .6vw);
+  margin: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background: #323232;
+}
+main nav {
+  flex: 0 0 auto;
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  background: white;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+main nav .country-search {
+  flex: 0 0 auto;
+  display: flex;
+  padding: 20px;
+}
+main nav .country-search input {
+  width: 100%;
+  padding: 10px 20px;
+  border: 2px solid #646464;
+  border-radius: 100px;
+  transition: border-color 0.2s ease-out;
+}
+main nav .country-search input:hover, main nav .country-search input:focus {
+  border-color: #1e1e1e;
+}
+main nav .country-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+main nav .country-list .country {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+main nav .country-list .country:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+main nav .country-list .country img {
+  width: 70px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+}
+main section {
+  flex: 1 1 auto;
+  display: flex;
+  background: no-repeat center;
+  background-size: cover;
+}
+main section:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main section .card-container {
+  flex: 1 1 auto;
+  display: flex;
+  background-color:dodgerblue;
+  justify-content: center;
+  align-items: start;
+  overflow-y: auto;
+  z-index: 1;
+}
+main section .card-container .card {
+  margin: 10px;
+  margin-bottom: 0;
+  position:absolute;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.75);
+}
+main section .card-container .card .card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+}
+main section .card-container .card .card-title img {
+  width: 70px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+}
+main section .card-container .card .card-{
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+main section .card-container .card .card-div {
+  margin-bottom: 20px;
+}
+footer {
+  flex: 0 0 auto;
+  z-index: 1;
+  background: #323232;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    width: 270px !important;
+  }
+  nav img {
+    width: 46.6666666667px !important;
+  }
+
+  section img {
+    width: 46.6666666667px !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  nav {
+    width: 180px !important;
+  }
+  nav img {
+    display: none;
+  }
+}
